@@ -1,0 +1,5 @@
+Verison 4.03 Release
+
+* Fixed implicit conversion loss integer precision: unsigned long to int warning whenever strlen is used by using static_cast<int>
+
+* fixed memory leak issue in ScmApp due to lack of destructor. Destructor was reintroduced and an algorithm was written to clear all courses loaded onto courseList_
