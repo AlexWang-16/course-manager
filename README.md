@@ -1,4 +1,4 @@
-# btp200-ms4
+# Sceneca Course Manager
 Seneca C++ Course Final Project Milestone 4 Summer 2016
 
 How to compile the code
