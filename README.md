@@ -13,6 +13,6 @@ Bugs to investigate
 It returns "invalid input" error instead.
 
 ##Screenshots
-![Main menu][menu]
+![alt text][menu]
 
 [menu]: https://github.com/alexwang-16/course-manager/screenshots/1.png "Main menu"
