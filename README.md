@@ -1,4 +1,4 @@
-Course Manager
+# Course Manager
 
 How to compile the code
 
@@ -11,3 +11,8 @@ Bugs to investigate
 * Changing study load of a course adds to the current course load instead of overriding the old value
 * Selecting change study load of a course option and typing in gibberish will cause menu to skip user input once.
 It returns "invalid input" error instead.
+
+##Screenshots
+![Main menu][menu]
+
+[menu]: https://github.com/alexwang-16/course-manager/screenshots/1.png "Main menu"
