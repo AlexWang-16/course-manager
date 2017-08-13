@@ -14,4 +14,6 @@ It returns "invalid input" error instead.
 
 ## Screenshots
 ![alt text](screenshots/1.png "main menu")
-
+![alt text](screenshots/2.png "adding a course")
+![alt text](screenshots/3.png "listing courses")
+![alt text](screenshots/8.png "saving and reloading data")
