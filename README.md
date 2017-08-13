@@ -12,6 +12,6 @@ Bugs to investigate
 * Selecting change study load of a course option and typing in gibberish will cause menu to skip user input once.
 It returns "invalid input" error instead.
 
-##Screenshots
+## Screenshots
 ![alt text](screenshots/1.png "main menu")
 
