@@ -1,5 +1,4 @@
-# Seneca Course Manager
-Seneca C++ Course Final Project Milestone 4 Summer 2016
+Course Manager
 
 How to compile the code
 
