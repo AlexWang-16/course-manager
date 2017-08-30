@@ -9,11 +9,6 @@ This application was written as a final project for 3rd semester C++ course at S
 3. Use g++ to compile the c++ code. Use the following command: `g++ -std=c++11 -o course_mgr *.cpp`
 4. Execute `./course_mgr` in terminal to launch the app.
 
-Bugs to investigate
-* Changing study load of a course adds to the current course load instead of overriding the old value
-* Selecting change study load of a course option and typing in gibberish will cause menu to skip user input once.
-It returns "invalid input" error instead.
-
 ## Screenshots
 ![alt text](screenshots/1.png "main menu")
 ![alt text](screenshots/2.png "adding a course")
