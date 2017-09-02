@@ -12,6 +12,7 @@ namespace sict {
 		int noOfCourses_;
 		char filename_[256];
 		std::fstream datafile_;
+    bool input_failure_ = false;
 
 	private:
 		//misc private functions

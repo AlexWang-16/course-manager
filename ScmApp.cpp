@@ -71,8 +71,8 @@ namespace sict{
 
 	/*interface function*/
 	int ScmApp::menu() {
-		int input = -1;
-		bool numValidate;
+		bool optionNotValid;
+    int input = -1;
 
 		cout << "Seneca Course Management Tool" << endl;
 		cout << "1- List Courses" << endl;
@@ -82,21 +82,22 @@ namespace sict{
 		cout << "5- Load courses from a file" << endl;
 		cout << "6- Save courses to a file" << endl;
 		cout << "0- Exit program" << endl;
-		cin >> input;
-		numValidate = cin.fail();
-		if (numValidate) {
-      cout << "Error: invalid menu entry" << endl;
-      cout << "Input was " << input <<endl;
-      input = -1;
+    if (input_failure_){
       cin.clear();
+      cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      input_failure_ = false;
+      input = -1;
+    }
+    cin >> input;
+		optionNotValid= cin.fail();
+		if (optionNotValid ||
+        input < SCMAPP_MENU_MIN || input > SCMAPP_MENU_MAX) {
+      cout << "Error: invalid menu entry" << endl;
+      input = -1;
 		}
-		else if (input < SCMAPP_MENU_MIN || input > SCMAPP_MENU_MAX) {
-			input = -1;
-		}
-
 		cin.clear();
 		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		return input;
+    return input;
 	}
 
 
@@ -251,6 +252,7 @@ namespace sict{
 		int studyLoadNum = 0;
 		if (index == -1) {
 			cout << "Not found!" << endl<< endl;
+      input_failure_ = true;
 		}
 		else {
 			cout << "Please enter amount of study load to increment/decrement\n(Use minus in front of number to decrement): ";
@@ -262,10 +264,12 @@ namespace sict{
 				cin >> studyLoadNum;
 			}
 			*courseList_[index] += studyLoadNum;
+      cin.clear();
 			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			cout << endl;
 		}
 	}
+  
 	void ScmApp::addCourse(int courseType) {
 			/* Read in user input and store data to the appropriate class */
 
@@ -372,6 +376,7 @@ namespace sict{
 				int result = searchACourse(theCourse);
 				if (result == -1) {
 					cout << "Not Found!" << endl << endl;
+          input_failure_ = true;
 				}
 				else {
 					cout << *courseList_[result] << endl;;
