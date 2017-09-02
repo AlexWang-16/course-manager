@@ -253,12 +253,12 @@ namespace sict{
 			cout << "Not found!" << endl<< endl;
 		}
 		else {
-			cout << "Please enter the amount of the study load: ";
+			cout << "Please enter amount of study load to increment/decrement\n(Use minus in front of number to decrement): ";
 			cin >> studyLoadNum;
 			while (cin.fail()){
 				cin.clear();
 				cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-				cout << "Please enter the amount of the study load: ";
+				cout << "Please enter amount of study load to increment/decrement\n(Use minus in front of number to decrement):";
 				cin >> studyLoadNum;
 			}
 			*courseList_[index] += studyLoadNum;
@@ -269,7 +269,7 @@ namespace sict{
 	void ScmApp::addCourse(int courseType) {
 			/* Read in user input and store data to the appropriate class */
 
-			if (noOfCourses_ < MAX_NO_RECS) {
+    if (noOfCourses_ < MAX_NO_RECS){
 				switch (courseType) {
 					case 1:
 						courseList_[noOfCourses_] = new ICTCourse();
